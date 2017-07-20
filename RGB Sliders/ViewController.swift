@@ -30,10 +30,20 @@ class ViewController: UIViewController {
         
         colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         
+        let defaults = UserDefaults.standard
+        defaults.set(redSlider.value, forKey: "red") //what does forKey mean?
+        defaults.set(greenSlider.value, forKey: "green")
+        defaults.set(blueSlider.value, forKey: "blue")
+        defaults.synchronize()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        redSlider.value = defaults.float(forKey: "red")
+        greenSlider.value = defaults.float(forKey: "green")
+        blueSlider.value = defaults.float(forKey: "blue")
+        
         updateBackgroundColor()
         colorSquare.layer.borderColor = UIColor.black.cgColor
         colorSquare.layer.borderWidth = 1
