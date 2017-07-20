@@ -83,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
-                                    <segue destination="pW7-aE-wpa" kind="show" id="hPT-oY-vaT"/>
+                                    <segue destination="pW7-aE-wpa" kind="show" identifier="openColor" id="hPT-oY-vaT"/>
                                 </connections>
                             </button>
                         </subviews>
